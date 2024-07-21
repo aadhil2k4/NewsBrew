@@ -1,11 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Search from "./Search";
 
 
-const Navbar = () => {
+const Navbar = (props) => {
   return (
     <header className="fixed-top">
-      <div class="p-3 text-center bg-body-tertiary border-bottom border-black">
+      <div class="p-3 text-center border-bottom border-black" style={{background: '#fddddd'}}>
     <div class="container">
       <div class="row">
         <div class="col-md-4 d-flex justify-content-center justify-content-md-start mb-3 mb-md-0">
@@ -14,10 +15,7 @@ const Navbar = () => {
           </Link>
         </div>
         <div class="col-md-4">
-          <form class="d-flex input-group w-auto my-auto mb-3 mb-md-0">
-            <input autocomplete="off" type="search" class="form-control rounded" placeholder="Search" />
-            <span class="input-group-text border-0 d-none d-lg-flex"><i class="fas fa-search"></i></span>
-          </form>
+          <Search />
         </div>
 
         <div class="col-md-4 d-flex justify-content-center justify-content-md-end align-items-center">
@@ -33,7 +31,7 @@ const Navbar = () => {
     </div>
   </div>
 
-      <nav className="navbar navbar-expand-lg border-bottom border-black bg-body-tertiary">
+      <nav className="navbar navbar-expand-lg border-bottom border-black" style={{background: '#fddddd'}}>
         <div className="container-fluid">
           <button
             className="navbar-toggler"
